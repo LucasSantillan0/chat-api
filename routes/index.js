@@ -18,6 +18,7 @@ function getResponseIndex(userMessage,responseList){
     arrayKeys[0]=arrayKeys[0]/messageLength
   }
   const betterResponse= Math.max(...arrayKeys)
+  if (betterResponse <=0.4)return 0
   return (arrayKeys.findIndex(e=>e===betterResponse)+1)
 }
 
@@ -51,6 +52,8 @@ router.get("/" ,async function (req, res){
 
 
   const index = getResponseIndex(userMessage,responseList)
+
+  if (index ===0)return res.send("No sé la respuesta, enseñame")
 
   const {response} = await Response.findByPk(index)
 
