@@ -10,7 +10,7 @@ const {
 const modelDefiners = [];
 
 
-const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/d1aa2h0n4d5rc4`, {
+const sequelize = new Sequelize(`postgres://${"yjruxtzfnqcytg"}:${"d5a8a0017c16df4df4733499e03dec839231d669ec72f5f859d30026368603dd"}@${"ec2-3-232-22-121.compute-1.amazonaws.com"}/d1aa2h0n4d5rc4`, {
   logging: false, // set to console.log to see the raw SQL queries
   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
   dialectModule: pg,
