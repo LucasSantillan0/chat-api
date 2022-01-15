@@ -44,7 +44,7 @@ router.post('/create', async function(req, res, next) {
 
 });
 
-router.get("/" ,async function (req, res){
+router.post("/" ,async function (req, res){
   let {userMessage} =req.body
   userMessage = userMessage.toLowerCase().split(" ")
   let responseList = await Response.findAll({ include: Word })
