@@ -53,7 +53,7 @@ router.post("/" ,async function (req, res){
 
   const index = getResponseIndex(userMessage,responseList)
 
-  if (index ===0)return res.send("No sé la respuesta, enseñame")
+  if (index ===0)return res.json({response:"No sé la respuesta, enseñame"})
 
   const {response} = await Response.findByPk(index)
 
