@@ -40,7 +40,7 @@ router.post('/create', async function(req, res, next) {
   }
   )
 
-  res.send(await Response.findAll({ include: Word }))
+  res.json(await Response.findAll({ include: Word }))
 
 });
 
@@ -57,7 +57,7 @@ router.post("/" ,async function (req, res){
 
   const {response} = await Response.findByPk(index)
 
-  res.send(response)
+  res.json(response)
 })
 
 
