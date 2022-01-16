@@ -57,7 +57,7 @@ router.post("/" ,async function (req, res){
 
   const {response} = await Response.findByPk(index)
 
-  res.json(response)
+  res.json({response: response})
 })
 
 
